@@ -1,0 +1,40 @@
+.services-heading-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services-heading{
+    color: #c19c17;
+    margin-bottom: 0;
+}
+.services-paragraph{
+    color: #999;
+    margin-top: 5px;
+    font-size: 20px;
+}
+.services-containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 40px;
+    gap: 40px; 
+    padding: 0 10px; 
+  }
+  
+@media (max-width: 768px) {
+    .services-paragraph {
+      font-size: 14px;
+      text-align: center;
+      padding: 0 10px;
+    }
+    .services-heading{
+        font-size: 20px;
+    }
+    .services-containers {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  

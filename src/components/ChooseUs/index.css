@@ -1,0 +1,123 @@
+.choose-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    padding: 5px;
+}
+.choose-heading{
+    color: #c19c17;
+    margin-bottom: 0px;
+    font-size:28px
+}
+.choose-paragraph{
+    color: #999; 
+}
+.choose-section-containers{
+    display: flex;
+    flex-direction: row;
+}
+.choose-section-container{
+    background-color: #c19c17;
+    filter: brightness(75%);
+    width: 275px;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:3px solid #999;
+    margin-right: 15px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.choose-section-container-heading{
+    margin-bottom: 0px;
+    color:#111111;
+    font-size:20px;
+}
+.choose-section-container-paragraph{
+    color: #111111;
+    font-size: 17px;
+    margin-top: 10px;
+    text-align: center;
+}
+.choose-section-icon-container{
+    height: 67px;
+    width: 67px;
+    background-color: #111111;
+    transform:rotate(45deg);
+    margin-top: 17px;
+    margin-bottom: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.choose-section-icon{
+    height: 40px;
+    width: 40px;
+    color: #c19c17;
+    transform: rotate(315deg);
+}
+@media screen and (max-width: 1024px) {
+    .choose-heading {
+      font-size: 24px;
+    }
+  
+    .choose-paragraph {
+      font-size: 14px;
+      text-align: center;
+      padding: 0 12px;
+    }
+  
+    .choose-section-containers {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+  
+    .choose-section-container {
+      width: 240px;
+      margin-right: 0;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .choose-heading {
+      font-size: 22px;
+      text-align: center;
+    }
+  
+    .choose-section-containers {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .choose-section-container {
+      width: 80%;
+      margin: 0 0 20px 0;
+    }
+  
+    .choose-section-container-heading {
+      font-size: 18px;
+    }
+  
+    .choose-section-container-paragraph {
+      font-size: 15px;
+    }
+  
+    .choose-section-icon-container {
+      height: 55px;
+      width: 55px;
+    }
+  
+    .choose-section-icon {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  

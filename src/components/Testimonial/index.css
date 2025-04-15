@@ -1,0 +1,128 @@
+.testimonial-section {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:0;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c19c17;
+    margin-bottom: 0px;
+  }
+  
+  .section-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .testimonial-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    .testimonial-container {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  .testimonial-card {
+    background:transparent;
+    padding: 30px 20px 50px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border: 2px dashed #c19c17;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+  }
+  .testimonial-card:hover{
+    transform: scale(1.05);
+  }
+  .quote-icon {
+    font-size: 70px;
+    color: #999;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-family: sans-serif;
+  }
+  
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #c19c17;
+  }
+  
+  .role {
+    font-weight: bold;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  
+  .message {
+    font-size: 14px;
+    color:#c19c17;
+    margin-bottom: 20px;
+  }
+  
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile-img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .section-title {
+      font-size: 20px;
+    }
+  
+    .section-subtitle {
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+  
+    .testimonial-card {
+      width: 82%;
+      padding: 20px 15px 40px;
+      margin-right: 0;
+    }
+  
+    .quote-icon {
+      font-size: 50px;
+      top: 5px;
+      left: 10px;
+    }
+  
+    .name {
+      font-size: 16px;
+    }
+  
+    .role {
+      font-size: 14px;
+    }
+  
+    .message {
+      font-size: 13px;
+    }
+  
+    .profile-img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  

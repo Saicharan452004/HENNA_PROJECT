@@ -1,0 +1,69 @@
+/* Header1 CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.nav-header1 {
+    background-color: #c19c17;
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.nav-header1-content {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.nav-header1-para {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.nav-header1-phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.phone {
+    align-self: center;
+    margin-right: 5px;
+}
+@media screen and (max-width: 1024px) {
+    .nav-header1 {
+        padding: 10px;
+        flex-direction: column;
+    }
+    
+    .nav-header1-content {
+        margin-bottom: 8px;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .nav-header1-phone {
+        margin-right: 0;
+        justify-content: center;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .nav-header1-para {
+        font-size: 10px;
+        padding: 0 5px;
+    }
+}

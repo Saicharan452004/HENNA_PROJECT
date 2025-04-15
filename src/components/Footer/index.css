@@ -1,0 +1,162 @@
+.footer {
+    background-color: #c19c17;
+    color: #111111;
+    padding: 20px 15px 15px;
+    width: 100%;
+  box-sizing: border-box;
+  padding: 20px 15px 15px;
+  margin: 0 auto;
+    margin-top: 35px;
+    filter: brightness(75%);
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+     flex: 1 1 200px;
+     margin: 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo-icon {
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  
+  .logo-name{
+    color: #111111;
+    font-weight: 500;
+  }
+  .icons-container{
+    display:flex;
+    flex-direction: row;
+  }
+  .icon{
+    height: 26px;
+    width: 26px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #111111;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .icon-color{
+    color: #c19c17;
+  }
+  .address {
+    margin: 0;
+    color: #111111;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 6px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section li:hover {
+    color: #00bfff;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+  }
+  /* Tablet View (768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-container {
+    justify-content: center;
+  }
+
+  .footer-section {
+    flex: 1 1 45%;
+    margin: 15px;
+  }
+
+  .footer-section h4 {
+    font-size: 15px;
+  }
+
+  .footer-section li {
+    font-size: 14px;
+  }
+
+  .icon {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+/* Mobile View (≤ 767px) */
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 10px 0;
+    flex: 1 1 100%;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .icons-container {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    height: 22px;
+    width: 22px;
+    margin-right: 8px;
+  }
+
+  .footer-section h4 {
+    font-size: 14px;
+  }
+
+  .footer-section li {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
