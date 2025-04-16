@@ -24,7 +24,7 @@ const ContactUs = () => {
     event.preventDefault()
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("https://henna-project-3dux.vercel.app/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -34,7 +34,7 @@ const ContactUs = () => {
 
       if (response.ok) {
         setResponseMsg("Message sent successfully!")
-        setFormData({ name: "", email: "", subject: "", message: "" }) // clear form
+        setFormData({ name: "", email: "", subject: "", message: "" }) 
       } else {
         setResponseMsg(result.message || "Failed to send message.")
       }
@@ -108,7 +108,7 @@ const ContactUs = () => {
               required
             />
             <button type="submit" className="contact-us-input-button">Submit</button>
-            {responseMsg && <p style={{ marginTop: "10px", color: "green" }}>{responseMsg}</p>}
+            {responseMsg && <p style={{ marginTop: "10px", color: "green", fontStyle:"bold"}}>{responseMsg}</p>}
           </form>
         </div>
       </div>

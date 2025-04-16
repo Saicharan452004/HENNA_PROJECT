@@ -27,7 +27,7 @@ const Faqs = (props) => {
     event.preventDefault()
 
     try {
-      const response = await fetch("http://localhost:5000/api/faq", {
+      const response = await fetch("https://henna-project-3dux.vercel.app/api/faq", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData) // Sending the form data
@@ -94,7 +94,7 @@ const Faqs = (props) => {
                 required
               />
               <button type="submit" className="input-button">Submit</button>
-              {responseMsg && <p style={{ marginTop: "10px", color: "green" }}>{responseMsg}</p>}
+              {responseMsg && <p style={{ marginTop: "10px", color: "green", fontStyle:"bold"}}>{responseMsg}</p>}
             </form>
           </div>
           <Faq />
