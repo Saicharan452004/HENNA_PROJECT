@@ -85,8 +85,8 @@
     padding-left: 30px;
     cursor: pointer;
 }
-.input-field-date{
-  background-color:#e0dcdc;
+.input-field-date {
+  background-color: #e0dcdc;
   border-width: 0px;
   height: 40px;
   margin-bottom: 20px;
@@ -101,6 +101,22 @@
   padding-left: 30px;
   cursor: pointer;
 }
+.input-field-date::before {
+  content: "MM/DD/YYYY"; 
+  position: absolute;
+  left: 35px;
+  top: 12px;
+  font-size: 15px;
+  color: #999;
+  pointer-events: none; 
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.input-field-date:not(:placeholder-shown)::before {
+  opacity: 0; 
+}
+
 .input-area{
     background-color:#e0dcdc;
     border-width: 0px;
