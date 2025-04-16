@@ -11,7 +11,10 @@ const appointmentRoutes = require('./routes/appointmentRoutes');
 const app = express();
 
 // Middleware
-app.use(cors()); // Enable CORS
+app.use(cors());
+app.use(cors({
+  origin: 'https://henna-project-frontend.vercel.app/'
+}));// Enable CORS
 app.use(express.json()); // Parse incoming JSON requests
 
 // Use routes
