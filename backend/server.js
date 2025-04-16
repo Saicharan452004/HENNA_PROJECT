@@ -13,20 +13,17 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(cors({
-  origin: 'https://henna-project-frontend.vercel.app/'
-}));// Enable CORS
+  origin: "http://localhost:3000", // your frontend origin
+  credentials: true
+}));
+// Enable CORS
 app.use(express.json()); // Parse incoming JSON requests
 
 // Use routes
 app.use('/api', contactRoutes);
 app.use('/api/faq', faqRoutes);
 app.use('/api/appointment', appointmentRoutes);
-app.get('/',(req,res)=>{
-  res.send({
-    activeStatus:true,
-    error:false,
-  })
-})
+
 
 console.log('Routes set up');
 
