@@ -21,7 +21,12 @@ app.use(express.json()); // Parse incoming JSON requests
 app.use('/api', contactRoutes);
 app.use('/api/faq', faqRoutes);
 app.use('/api/appointment', appointmentRoutes);
-
+app.get('/',(req,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false,
+  })
+})
 
 console.log('Routes set up');
 
