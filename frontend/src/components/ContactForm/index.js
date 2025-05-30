@@ -23,7 +23,7 @@ const ContactForm = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/appointment", {
+      const response = await fetch("https://henna-project.onrender.com/api/appointment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
