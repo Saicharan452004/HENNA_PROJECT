@@ -11,10 +11,22 @@ const appointmentRoutes = require('./routes/appointmentRoutes');
 const app = express();
 
 
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://henna-project-frontend.vercel.app'
+];
+
 app.use(cors({
-  origin: "https://henna-project-frontend.vercel.app", // your frontend origin
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
+
 // Enable CORS
 app.use(express.json()); // Parse incoming JSON requests
 
