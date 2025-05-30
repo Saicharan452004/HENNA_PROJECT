@@ -10,8 +10,7 @@ const appointmentRoutes = require('./routes/appointmentRoutes');
 
 const app = express();
 
-// Middleware
-app.use(cors());
+
 app.use(cors({
   origin: "http://localhost:3000", // your frontend origin
   credentials: true
