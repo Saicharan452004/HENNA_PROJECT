@@ -12,7 +12,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: "https://henna-project-frontend.vercel.app/", // your frontend origin
+  origin: "https://henna-project-frontend.vercel.app", // your frontend origin
   credentials: true
 }));
 // Enable CORS
