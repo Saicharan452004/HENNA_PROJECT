@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.admin-home-container {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #111111;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .admin-home-container {
+    padding: 10px; 
+  }
+}
+@media screen and (max-width: 767px) {
+  .admin-home-container {
+    padding: 8px; 
+  }
+}
+.admin-home-list-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    list-style-type: none;
+}
+.admin-home-list-item{
+    background-color: #c19c17;
+    height: 40px;
+    width: 140px;
+    border-radius: 12px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+.admin-home-list-link{
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+}

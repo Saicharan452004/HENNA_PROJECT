@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import { Route, Routes } from "react-router-dom";
-import AdminHome from "./components/AdminHome";
-import AdminContact from "./components/AdminContact";
-import AdminFaqs from "./components/AdminFaqs";
-import AdminAppointment from "./components/AdminAppointment";
-import './App.css';
 
-class App extends Component{
+class AdminDashboard extends Component {
   state = {
     contacts: [],
     faqs: [],
@@ -34,17 +28,44 @@ class App extends Component{
       console.error('Error fetching data:', error);
     }
   };
-  render(){
+
+  render() {
     const { contacts, faqs, appointments } = this.state;
-    return(
-      <Routes>
-        <Route exact path="/" element={<AdminHome />} />
-        <Route exact path="/appointments" element={<AdminAppointment appointments={appointments}/>} />
-        <Route exact path="/faqs" element={<AdminFaqs faqs={faqs}/>} />
-        <Route exact path="/contactus" element={<AdminContact contacts={contacts}/>} />
-      </Routes>
-    )
+
+    return (
+      <div style={{ padding: "20px" }}>
+        <h2>Admin Dashboard</h2>
+
+        <h3>Contact Submissions</h3>
+        <ul>
+          {contacts.map((c, index) => (
+            <li key={index}>
+              {c.name} - {c.email} - {c.message}
+            </li>
+          ))}
+        </ul>
+
+        <h3>FAQ Submissions</h3>
+        <ul>
+          {faqs.map((f, index) => (
+            <li key={index}>
+              {f.name} - {f.subject}
+            </li>
+          ))}
+        </ul>
+
+        <h3>Appointments</h3>
+        <ul>
+          {appointments.map((a, index) => (
+            <li key={index}>
+              {a.name} - {a.date} - {a.service}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
   }
 }
 
-export default App;
+export default AdminDashboard;
+

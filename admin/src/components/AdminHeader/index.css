@@ -1,0 +1,18 @@
+.admin-header{
+    border: solid 2px #c19c17;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.admin-header-logo-1{
+    height: 35px;
+    border: #c19c17 1px solid;
+}
+.admin-header-logo-2{
+    height: 35px;
+    border-radius: 50%;
+    border: #c19c17 2px solid;
+}
