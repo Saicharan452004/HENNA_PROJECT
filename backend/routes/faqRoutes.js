@@ -3,9 +3,11 @@ const router = express.Router();
 const faqController = require('../controllers/faqController');
 
 // POST route for submitting FAQ
-console.log('FAQ POST route reached');
 router.post('/', faqController.submitFAQ);
-console.log('FAQ POST route reached');
 
+router.get('/all', async (req, res) => {
+  const faqs = await faqController.find();
+  res.json(faqs);
+});
 
 module.exports = router;
