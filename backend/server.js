@@ -31,7 +31,7 @@ app.use(cors({
 app.use(express.json()); // Parse incoming JSON requests
 
 // Use routes
-app.use('/api', contactRoutes);
+app.use('/api/contact', contactRoutes);
 app.use('/api/faq', faqRoutes);
 app.use('/api/appointment', appointmentRoutes);
 
