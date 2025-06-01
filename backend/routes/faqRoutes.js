@@ -7,4 +7,6 @@ router.post('/', faqController.submitFAQ);
 
 router.get('/all', faqController.getAllFAQs);
 
+router.delete('/:id',faqController.deleteFAQ);
+
 module.exports = router;

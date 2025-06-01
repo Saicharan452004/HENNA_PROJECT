@@ -29,7 +29,21 @@ const getAllFAQs = async (req, res) => {
   }
 };
 
+const deleteFAQ=async(req,res)=>{
+  try{
+    const deletedFAQ=await FAQ.findByIdAndDelete(req.params.id)
+    if(!deletedFAQ){
+      return res.status(404).json({message:"FAQ not found"});
+    }
+    res.json({message:"FAQ deleted successfully"});
+  }
+  catch(error){
+    console.error("Error deleting FAQ",error);
+    res.status(500).json({message:"server error deleting FAQ"});
+  }
+;}
 module.exports = {
   submitFAQ,
-  getAllFAQs
+  getAllFAQs,
+  deleteFAQ
 };

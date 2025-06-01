@@ -7,4 +7,6 @@ router.post('/contact', formController.submitContactForm);
 
 router.get('/all', formController.getAllContacts);
 
+router.delete('/:id',formController.deletecontact);
+
 module.exports = router;
