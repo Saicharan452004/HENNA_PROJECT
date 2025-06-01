@@ -24,6 +24,7 @@ const Faqs = (props) => {
 
   // Handle form submission
   const submitForm = async (event) => {
+    console.log("triggered");
     event.preventDefault()
 
     try {
