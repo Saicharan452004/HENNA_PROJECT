@@ -7,4 +7,6 @@ router.post('/', appointmentController.submitAppointment);
 
 router.get('/all', appointmentController.getAllAppointments);
 
+router.delete('/:id',appointmentController.deleteAppointment);
+
 module.exports = router;

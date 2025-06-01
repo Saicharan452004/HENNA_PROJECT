@@ -32,7 +32,22 @@ const getAllAppointments = async (req, res) => {
   }
 };
 
+const deleteAppointment=async(req,res)=>{
+  try{
+    const deletedAppointment=await AppointmentForm.findByIdAndDelete(req.params.id)
+    if(!deletedAppointment){
+      return res.status(404).json({message:"Appointment not found"});
+    }
+    res.json({message:"Appointment deleted successfully"});
+  }
+  catch(error){
+    console.error("Error deleting Appointment",error);
+    res.status(500).json({message:"server error deleting appointment"});
+  }
+;}
+
 module.exports = {
   submitAppointment,
-  getAllAppointments
+  getAllAppointments,
+  deleteAppointment
 };
