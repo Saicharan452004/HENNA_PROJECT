@@ -1,6 +1,6 @@
 import { Component } from "react";
 import AdminHeader from "../AdminHeader";
-import { Circles } from "react-loader-spinner"; 
+import {ThreeCircles} from 'react-loader-spinner'
 import "./index.css";
 
 class AppointmentsPage extends Component {
@@ -66,7 +66,7 @@ class AppointmentsPage extends Component {
 
         {loading ? (
           <div className="spinner-container">
-            <Circles height="80" width="80" color="white" ariaLabel="loading" />
+            <ThreeCircles color="#ffffff" height="50" width="50" />
           </div>
         ) : (
           <div className="appointments-container">

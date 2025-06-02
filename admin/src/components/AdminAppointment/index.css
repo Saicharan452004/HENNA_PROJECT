@@ -18,13 +18,15 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   background-color: #c19c17;
 }
-.admin-appointment-heading{
-    color: #c19c17;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 30px;
+
+.admin-appointment-heading {
+  color: #c19c17;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
 }
+
 .delete-button-container {
   margin-top: 10px;
   text-align: right;
@@ -38,6 +40,48 @@
   padding: 6px 12px;
   cursor: pointer;
 }
+
+/* ✅ Tablet View (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .appointments-container {
+    margin-left: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .appointment-card {
+    width: 260px;
+  }
+
+  .admin-appointment-heading {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .appointments-container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .appointment-card {
+    width: 90%;
+  }
+
+  .admin-appointment-heading {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .delete-button {
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
 .loading-spinner {
   text-align: center;
   font-size: 18px;
