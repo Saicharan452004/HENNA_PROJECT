@@ -5,22 +5,19 @@ import "./index.css";
 
 class ContactUsPage extends Component {
   state = {
-    contacts: [],
-    loading: true,
+    contacts: []
   };
 
   componentDidMount() {
     this.setState({
-      contacts: [...this.props.contacts],
-      loading: false,
+      contacts: [...this.props.contacts]
     });
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.contacts !== this.props.contacts) {
       this.setState({
-        contacts: [...this.props.contacts],
-        loading: false,
+        contacts: [...this.props.contacts]
       });
     }
   }
@@ -61,12 +58,6 @@ class ContactUsPage extends Component {
       <div className="admin-home-container">
         <AdminHeader />
         <h2 className="admin-appointment-heading">Contact Messages</h2>
-
-        {loading ? (
-          <div className="spinner-container">
-            <Circles height="80" width="80" color="#4fa94d" ariaLabel="loading" />
-          </div>
-        ) : (
           <div className="appointments-container">
             {contacts.length === 0 ? (
               <p>No contact messages found.</p>
@@ -90,7 +81,6 @@ class ContactUsPage extends Component {
               ))
             )}
           </div>
-        )}
       </div>
     );
   }

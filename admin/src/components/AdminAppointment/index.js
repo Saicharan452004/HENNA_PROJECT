@@ -1,26 +1,22 @@
 import { Component } from "react";
 import AdminHeader from "../AdminHeader";
-import {ThreeCircles} from 'react-loader-spinner'
 import "./index.css";
 
 class AppointmentsPage extends Component {
   state = {
-    appointments: [],
-    loading: true,
+    appointments: []
   };
 
   componentDidMount() {
     this.setState({
-      appointments: [...this.props.appointments],
-      loading: false,
+      appointments: [...this.props.appointments]
     });
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.appointments !== this.props.appointments) {
       this.setState({
-        appointments: [...this.props.appointments],
-        loading: false,
+        appointments: [...this.props.appointments]
       });
     }
   }
@@ -63,12 +59,6 @@ class AppointmentsPage extends Component {
       <div className="admin-home-container">
         <AdminHeader />
         <h2 className="admin-appointment-heading">Appointments</h2>
-
-        {loading ? (
-          <div className="spinner-container">
-            <ThreeCircles color="#ffffff" height="50" width="50" />
-          </div>
-        ) : (
           <div className="appointments-container">
             {appointments.length === 0 ? (
               <p>No appointments found.</p>
@@ -92,7 +82,6 @@ class AppointmentsPage extends Component {
               ))
             )}
           </div>
-        )}
       </div>
     );
   }

@@ -5,22 +5,19 @@ import "./index.css";
 
 class AdminFaqs extends Component {
   state = {
-    faqs: [],
-    loading: true,
+    faqs: []
   };
 
   componentDidMount() {
     this.setState({
-      faqs: [...this.props.faqs],
-      loading: false,
+      faqs: [...this.props.faqs]
     });
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.faqs !== this.props.faqs) {
       this.setState({
-        faqs: [...this.props.faqs],
-        loading: false,
+        faqs: [...this.props.faqs]
       });
     }
   }
@@ -53,12 +50,6 @@ class AdminFaqs extends Component {
       <div className="admin-home-container">
         <AdminHeader />
         <h2 className="admin-appointment-heading">FAQs</h2>
-
-        {loading ? (
-          <div className="spinner-container">
-            <Circles height="80" width="80" color="#4fa94d" ariaLabel="loading" />
-          </div>
-        ) : (
           <div className="appointments-container">
             {faqs.length === 0 ? (
               <p>No FAQs found.</p>
@@ -81,7 +72,6 @@ class AdminFaqs extends Component {
               ))
             )}
           </div>
-        )}
       </div>
     );
   }
