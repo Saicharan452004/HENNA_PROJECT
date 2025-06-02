@@ -13,7 +13,8 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://henna-project-frontend.vercel.app'
+  'https://henna-project-frontend.vercel.app',
+  'https://henna-project.vercel.app'
 ];
 
 app.use(cors({
