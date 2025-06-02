@@ -1,6 +1,5 @@
 import { Component } from "react";
 import AdminHeader from "../AdminHeader";
-import { Circles } from "react-loader-spinner";
 import "./index.css";
 
 class ContactUsPage extends Component {
